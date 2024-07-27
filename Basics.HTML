@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <script type="text/javascript" src="Basicsjs.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1, h2, h3 {
+            color: #00698f;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #00698f;
+        }
+
+        h2, h3 {
+            color: #008000;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            font-family: monospace;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+
+        pre code {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+        }
+
+        ul ul {
+            margin-left: 20px;
+        }
+
+        ul ul li {
+            margin-bottom: 5px;
+        }
+
+        ul ul li::before {
+            content: "\2022";
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 5px;
+            color: #008000;
+        }
+
+        h1:first-child {
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Basics of JavaScript</h1>
+
+    <h2>Console.log</h2>
+
+    <h2>let and var variable</h2>
+
+    <h2>Constant variable</h2>
+
+    <h2>Variable Rules</h2>
+    <ul>
+        <li>Cannot be a reserved keyword (if, let, var)</li>
+        <li>Variable name should be meaningful</li>
+        <li>Cannot start with a number</li>
+        <li>Cannot contain space or underscore</li>
+        <li>Camel case example: (ageOfStudent), (loveBabba)</li>
+    </ul>
+
+    <h2>Multiple Variable Declaration</h2>
+    <p>We can use let a, b; too (multiple variable declaration)</p>
+
+    <h2>Types of Data</h2>
+    <h3>Primitive data type</h3>
+    <ul>
+        <li>Number (integer, float)</li>
+        <li>String (Sequence of characters)</li>
+        <li>Boolean (true, false)</li>
+        <li>Undefined (VALUE NOT DEFINED)
+            <ul>
+                <li>
+                    Example:
+                    <pre><code>let a;
+console.log(a); // undefined</code></pre>
+                </li>
+            </ul>
+        </li>
+        <li>NULL (VALUE IS EMPTY)</li>
+    </ul>
+
+    <h2>Dynamic Typing</h2>
+    <p>We can add any type of data inside variables.</p>
+    <ul>
+        <li>
+            In CSS and Java:
+            <pre><code>int a = 5;
+a = "Babbar"; // error</code></pre>
+        </li>
+        <li>
+            In JavaScript:
+            <pre><code>let a = 5;
+a = "Babbar"; // No error</code></pre>
+        </li>
+    </ul>
+
+    <h2>Reference Types</h2>
+    <ul>
+        <li>Objects (KEY: VALUE PAIR)
+            <ul>
+                <li>Objects have properties and behaviors</li>
+                <li>Example:
+                    <pre><code>let Person = {
+    firstname: 'Jiya',
+    age: 24
+};</code></pre>
+                    <p>Here Person is an object. We can access the object using:</p>
+                    <ul>
+                        <li>Dot Notation: <code>Person.age</code></li>
+                        <li>Bracket Notation: <code>Person["age"]</code></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Arrays
+            <ul>
+                <li>A data structure that contains a similar list of items.</li>
+                <li>Example:
+                    <pre><code>let names = ['love', 'rahul', 'sangram'];
+names[3] = "Sham";</code></pre>
+                </li>
+            </ul>
+        </li>
+        <li>Functions</li>
+    </ul>
+
+    <h2>Printing</h2>
+    <p>We can do printing by <code>console.log()</code> function.</p>
+
+    <h2>Var and let Keyword</h2>
+    <p>Both keywords are used to create variables. Inside a variable, we can store any type of data.</p>
+    <ul>
+        <li>Var and let are two keywords through which we can create variables.</li>
+        <li>Difference between var and let is just scope:
+            <ul>
+                <li>Let has local scope, whereas var has global scope.</li>
+                <li>Redeclaration is not possible with let, but it is possible with var.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Constant Variables</h2>
+    <p>If we try to assign a new value to a constant variable, an error (Assignment to constant variable) will occur.</p>
+
+    <h2>Operators</h2>
+    <ul>
+        <li>Arithmetic
+            <ul>
+                <li>+(Addition)</li>
+                <li>-(Subtraction)</li>
+                <li>*(Multiplication)</li>
+                <li>/(Division)</li>
+                <li>%(Modulus)</li>
+                <li>**(Exponentiation)</li>
+            </ul>
+        </li>
+        <li>Assignment
+            <pre><code>let a = 5;</code></pre>
+        </li>
+        <li>Comparison (Return type is boolean)
+            <ul>
+                <li><</li>
+                <li>></li>
+                <li><=</li>
+                <li>>=</li>
+                <li>== (Loose Equality)
+                    <ul>
+                        <li>Example:
+                            <pre><code>let num = 1;
+let str = '1';
+console.log(num == str); // True</code></pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>=== (Strict Equality)
+                    <ul>
+                        <li>Example:
+                            <pre><code>let num = 1;
+let str = '1';
+console.log(num === str); // False</code></pre>
+                        </li>
+                    </ul>
+                </li>
+                <li>!= (Not equal)</li>
+                <li>!== (Strict Not equal)</li>
+            </ul>
+        </li>
+        <li>Bitwise
+            <ul>
+                <li>Bitwise And (&)</li>
+                <li>Bitwise OR (|)</li>
+            </ul>
+            <img src="Bitwise.jpg" alt="Bitwise Operators">
+        </li>
+        <li>Logical
+            <ul>
+                <li>AND (&&)</li>
+                <li>OR (||)</li>
+                <li>NOT (!)</li>
+            </ul>
+        </li>
+        <li>Increment/Decrement
+            <ul>
+                <li>Pre-increment (++x)
+                    <p>First increment the value, then use the value.</p>
+                    <pre><code>let x = 10;
+console.log(++x); // 11</code></pre>
+                </li>
+                <li>Post-increment (x++)
+                    <p>First use the value, then increment the value.</p>
+                    <pre><code>let a = 6;
+console.log(a++); // 6</code></pre>
+                </li>
+                <li>Pre-decrement (--x) and Post-decrement (x--)</li>
+            </ul>
+            <img src="prepost.jpg" alt="Pre and Post Increment/Decrement">
+        </li>
+        <li>Ternary Operator
+            <img src="Ternary.jpg" alt="Ternary Operator">
+        </li>
+        <li>Concept of Falsy and Truthy with Non-Boolean Values
+            <ul>
+                <li>With OR
+                    <ul>
+                        <li><img src="Withnonbool.jpg" alt="With Non-Boolean Values" ></li>
+                        <li><img src="ShortCircuit.jpg" alt="Short Circuit" height="100px",width="50vw"></li>
+                    </ul>
+                </li>
+            </ul
+
+        </li>
+        <h1>Control Statements</h1>
+        <uL>
+            <li>if-else</li>
+            <li>Switch Case</li>
+        </uL>
+        <h1>LOOPS</h1>
+        <p>Loops are used when we want to repition of taks</p>
+        <ul>
+            <li>For loop
+                <img src="Forloop.jpg">
+            </li>
+            <li>While loop
+                <img src="whileloop.jpg">
+            </li>
+            <li>Do while loop(at least one time execute even condition true or not)
+                <img src="dowhile.jpg">
+            </li>
+            <li>Infinite loop</li>
+            <li>For-in-loop</li>
+            <li>For-of-loop</li>
+        </ul>
+        <ul>
+
+        </ul>
+    </body>
+</html>
